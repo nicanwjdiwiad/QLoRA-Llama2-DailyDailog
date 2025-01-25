@@ -6,21 +6,21 @@
 
 
 ## 设备与环境
-- **设备**: T4-GPU  
-- **显存**: 15GB  
+- **设备**: L4-GPU  
+- **显存**: 22GB(实际只用了16,后续会调整Batch大小找到位于8与16之间的最优解)  
 - **框架**: PyTorch
 
 ## 超参数配置
 
 ### 基本超参数
-- **Batch Size**: 4
-- **Gradient Accumulation Steps**: 1
+- **Batch Size**: 8
+- **Gradient Accumulation Steps**: 4
 - **Learning Rate**:  
   - 调整后的学习率（adjusted_lr）由以下公式计算：  
   ```math
     \text{adjusted\_lr} = \text{base\_lr} \times \sqrt{\frac{\text{supervised\_tokens\_in\_batch} \times \text{total\_supervised\_tokens}}{\left(\frac{\text{num\_steps}}{\text{num\_epochs}}\right) \times \text{pretrained\_bsz}}}
   ```
-
+Meta官方并未给出预训练数据集(pretrained\_bsz)的大小，但是根据@mlabonne佬先前脚本中设定的参数大致可计算我需要的learning_rate
 ### QLoRA参数
 - **r (低秩矩阵的秩)**: 64
 - **α (量化精度)**: 16
