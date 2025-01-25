@@ -8,7 +8,7 @@
 ## 设备与环境
 - **设备**: T4-GPU  
 - **显存**: 15GB  
-- **框架**: 请提供所使用的框架（如PyTorch、TensorFlow等）
+- **框架**: PyTorch
 
 ## 超参数配置
 
@@ -17,9 +17,9 @@
 - **Gradient Accumulation Steps**: 1
 - **Learning Rate**:  
   - 调整后的学习率（adjusted_lr）由以下公式计算：  
-    ```math
+  ```math
     \text{adjusted\_lr} = \text{base\_lr} \times \sqrt{\frac{\text{supervised\_tokens\_in\_batch} \times \text{total\_supervised\_tokens}}{\left(\frac{\text{num\_steps}}{\text{num\_epochs}}\right) \times \text{pretrained\_bsz}}}
-    ```
+  ```
 
 ### QLoRA参数
 - **r (低秩矩阵的秩)**: 64
