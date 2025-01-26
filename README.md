@@ -7,15 +7,15 @@
 
 ## 设备与环境
 - **设备**: L4-GPU  
-- **显存**: 22GB(实际只用了16,后续会调整Batch大小找到位于8与16之间的最优解)  
+- **显存**: 22GB(21.2GB used)  
 - **框架**: PyTorch
 
 ## 超参数配置
 
 ### 基本超参数
-- **Batch Size**: 8
-- **Gradient Accumulation Steps**: 4
-- **Learning Rate**:  
+- **Batch Size**: 72=12*6
+- **Gradient Accumulation Steps**: 6
+- **Learning Rate**:  5e-4
   - 调整后的学习率（adjusted_lr）由以下公式计算：  
   ```math
     \text{adjusted\_lr} = \text{base\_lr} \times \sqrt{\frac{\text{supervised\_tokens\_in\_batch} \times \text{total\_supervised\_tokens}}{\left(\frac{\text{num\_steps}}{\text{num\_epochs}}\right) \times \text{pretrained\_bsz}}}
