@@ -90,3 +90,6 @@ trainer.train()
 
 # Save the trained model
 trainer.model.save_pretrained(new_model)
+#评估模型效果
+test_results = trainer.evaluate(eval_dataset=test_tokenized)
+print(f"Test results: {test_results}")
