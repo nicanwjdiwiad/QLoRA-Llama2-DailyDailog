@@ -29,3 +29,5 @@ Meta官方并未给出预训练数据集(pretrained\_bsz)的大小，但是根�
 - batch_size=12*6;epoch=2;r=64;α=16;lr=5e-4
 - test_loss=1.9491353034973145
 ![Image](https://github.com/nicanwjdiwiad/QLoRA-Llama2-DailyDailog/blob/main/f66.png)
+
+###目前效果最好的权重文件在目录了
