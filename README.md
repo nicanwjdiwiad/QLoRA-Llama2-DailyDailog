@@ -26,6 +26,6 @@ Meta官方并未给出预训练数据集(pretrained\_bsz)的大小，但是根�
 - **α (量化精度)**: 16
 - **Target Modules**: attention(q,v)\\
 ###1.26:
-- **batch_size=12*6;epoch=2;r=64;\alpha=16;lr=5e-4
-- **test_loss=1.9491353034973145
+- batch_size=12*6;epoch=2;r=64;α=16;lr=5e-4
+- test_loss=1.9491353034973145
 ![Image](https://github.com/nicanwjdiwiad/QLoRA-Llama2-DailyDailog/blob/main/f66.png)
