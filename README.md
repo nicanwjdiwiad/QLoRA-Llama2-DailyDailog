@@ -16,7 +16,7 @@
 - **Batch Size**: 72=12*6
 - **Gradient Accumulation Steps**: 6
 - **Learning Rate**:  5e-4
-  - 调整后的学习率（adjusted_lr）由以下公式计算：  
+  - 基于https://rentry.org/llm-training#low-rank-adaptation-lora_1调整后的学习率（adjusted_lr）由以下公式计算：  
   ```math
     \text{adjusted\_lr} = \text{base\_lr} \times \sqrt{\frac{\text{supervised\_tokens\_in\_batch} \times \text{total\_supervised\_tokens}}{\left(\frac{\text{num\_steps}}{\text{num\_epochs}}\right) \times \text{pretrained\_bsz}}}
   ```
